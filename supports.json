@@ -1,0 +1,48 @@
+{
+    "Ana": {
+        "position": [1404, 856],
+        "x-index": 15,
+        "y-index": 0
+    },
+    "Baptiste": {
+        "position": [1473, 856],
+        "x-index": 16,
+        "y-index": 0
+    },
+    "Brigitte": {
+        "position": [1563, 857],
+        "x-index": 17,
+        "y-index": 0
+    },
+    "Kiriko": {
+        "position": [1612, 856],
+        "x-index": 18,
+        "y-index": 0
+    },
+    "Lucio": {
+        "position": [1669, 857],
+        "x-index": 19,
+        "y-index": 0
+    },
+
+    "Lifeweaver": {
+        "position": [1418, 921],
+        "x-index": 13,
+        "y-index": 1
+    },
+    "Mercy": {
+        "position": [1475, 919],
+        "x-index": 14,
+        "y-index": 1
+    },
+    "Moira": {
+        "position": [1562, 922],
+        "x-index": 15,
+        "y-index": 1
+    },
+    "Zenyatta": {
+        "position": [1606, 920],
+        "x-index": 16,
+        "y-index": 1
+    }
+}
