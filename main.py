@@ -4,6 +4,7 @@ import pyautogui
 import win32gui
 import win32api
 import keyboard
+from heroSelection import HeroSelection
 
 print('start')
 
@@ -11,7 +12,7 @@ print('start')
 x = 0
 y = 0
 
-active = False
+active = True
 
 # Define the color of the pixel to trigger the key press
 white = (255, 255, 255)
@@ -42,23 +43,32 @@ def run():
 
         # Print the pixel value as RGB tuple
         print("Pixel value:", (pixel & 0xff), ((pixel >> 8) & 0xff), ((pixel >> 16) & 0xff))
-        # print(pyautogui.position())a
+        print("Pixel position:", pyautogui.position().x, pyautogui.position().y)
+
+
+        heroSelection = HeroSelection()
+        heroSelection.initialize()
+
+        break
 
         # Wait for a short time before checking again
-        time.sleep(0.1)
+        time.sleep(0.5)
 
-def listenForKey(key):
-    global active
-    if key.name == 'a':
-        active = not active
 
-keyboard.on_press(listenForKey)
+run()
 
-# Create a new thread and start running the function in the background
-thread = threading.Thread(target=run)
-thread.daemon = True
-thread.start()
+# def listenForKey(key):
+#     global active
+#     if key.name == 'a':
+#         active = not active
 
-# Program will continue to run in the background indefinitely
-while True:
-    time.sleep(0.1)
+# keyboard.on_press(listenForKey)
+
+# # Create a new thread and start running the function in the background
+# thread = threading.Thread(target=run)
+# thread.daemon = True
+# thread.start()
+
+# # Program will continue to run in the background indefinitely
+# while True:
+#     time.sleep(0.5)

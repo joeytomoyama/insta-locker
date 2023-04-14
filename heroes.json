@@ -1,0 +1,188 @@
+{
+    "D.Va": {
+        "position": [100, 100],
+        "x-index": 0,
+        "y-index": 0
+    },
+    "Doomfist": {
+        "position": [100, 100],
+        "x-index": 0,
+        "y-index": 1
+    },
+    "JunkerQueen": {
+        "position": [100, 100],
+        "x-index": 0,
+        "y-index": 2
+    },
+    "Orisa": {
+        "position": [100, 100],
+        "x-index": 0,
+        "y-index": 3
+    },
+    "Ramattra": {
+        "position": [100, 100],
+        "x-index": 0,
+        "y-index": 4
+    },
+    "Reinhardt": {
+        "position": [100, 100],
+        "x-index": 0,
+        "y-index": 5
+    },
+    "Ashe": {
+        "position": [100, 100],
+        "x-index": 0,
+        "y-index": 6
+    },
+    "Bastion": {
+        "position": [100, 100],
+        "x-index": 0,
+        "y-index": 7
+    },
+    "Cassidy": {
+        "position": [100, 100],
+        "x-index": 0,
+        "y-index": 8
+    },
+    "Echo": {
+        "position": [100, 100],
+        "x-index": 0,
+        "y-index": 9
+    },
+    "Genji": {
+        "position": [100, 100],
+        "x-index": 0,
+        "y-index": 10
+    },
+    "Hanzo": {
+        "position": [100, 100],
+        "x-index": 0,
+        "y-index": 11
+    },
+    "Junkrat": {
+        "position": [100, 100],
+        "x-index": 0,
+        "y-index": 12
+    },
+    "Mei": {
+        "position": [100, 100],
+        "x-index": 0,
+        "y-index": 13
+    },
+    "Pharah": {
+        "position": [100, 100],
+        "x-index": 0,
+        "y-index": 14
+    },
+    "Ana": {
+        "position": [100, 100],
+        "x-index": 0,
+        "y-index": 15
+    },
+    "Baptiste": {
+        "position": [100, 100],
+        "x-index": 0,
+        "y-index": 16
+    },
+    "Brigitte": {
+        "position": [100, 100],
+        "x-index": 0,
+        "y-index": 17
+    },
+    "Kiriko": {
+        "position": [100, 100],
+        "x-index": 0,
+        "y-index": 18
+    },
+    "Lúcio": {
+        "position": [100, 100],
+        "x-index": 0,
+        "y-index": 19
+    },
+    
+    "Roadhog": {
+        "position": [100, 100],
+        "x-index": 1,
+        "y-index": 0
+    },
+    "Sigma": {
+        "position": [100, 100],
+        "x-index": 1,
+        "y-index": 1
+    },
+    "Winston": {
+        "position": [100, 100],
+        "x-index": 1,
+        "y-index": 2
+    },
+    "WreckingBall": {
+        "position": [100, 100],
+        "x-index": 1,
+        "y-index": 3
+    },
+    "Zarya": {
+        "position": [100, 100],
+        "x-index": 1,
+        "y-index": 4
+    },
+    "Reaper": {
+        "position": [100, 100],
+        "x-index": 1,
+        "y-index": 5
+    },
+    "Sojourn": {
+        "position": [100, 100],
+        "x-index": 1,
+        "y-index": 6
+    },
+    "Soldier76": {
+        "position": [100, 100],
+        "x-index": 1,
+        "y-index": 7
+    },
+    "Sombra": {
+        "position": [100, 100],
+        "x-index": 1,
+        "y-index": 8
+    },
+    "Symmetra": {
+        "position": [100, 100],
+        "x-index": 1,
+        "y-index": 9
+    },
+    "Torbjörn": {
+        "position": [100, 100],
+        "x-index": 1,
+        "y-index": 10
+    },
+    "Tracer": {
+        "position": [100, 100],
+        "x-index": 1,
+        "y-index": 11
+    },
+    "Widowmaker": {
+        "position": [100, 100],
+        "x-index": 1,
+        "y-index": 12
+    },
+    "Lifeweaver": {
+        "position": [100, 100],
+        "x-index": 1,
+        "y-index": 13
+    },
+    "Mercy": {
+        "position": [100, 100],
+        "x-index": 1,
+        "y-index": 14
+    },
+    "Moira": {
+        "position": [100, 100],
+        "x-index": 1,
+        "y-index": 15
+    },
+    "Zenyatta": {
+        "position": [100, 100],
+        "x-index": 1,
+        "y-index": 16
+    }
+}
