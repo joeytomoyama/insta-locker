@@ -11,7 +11,6 @@ class JsonReader:
         return self.heroes
 
     def returnTargetHero(self):
-        # Get heroes data from json
         with open('public/settings.json', 'r') as file:
             targetHero = json.load(file)['targetHero']
 
@@ -20,9 +19,5 @@ class JsonReader:
                 return [properties['x-index'], properties['y-index']]
         
     def returnActivationKey(self):
-        # Get heroes data from json
         with open('public/settings.json', 'r') as file:
             return json.load(file)['activationKey']
-
-print(JsonReader().returnTargetHero())
-print(JsonReader().returnActivationKey())

@@ -10,9 +10,6 @@ print('start')
 active = False
 startTime = None
 
-# # Get the handle to the desktop window
-# hDesktop = win32gui.GetDesktopWindow()
-
 jsonReader = JsonReader()
 heroes = jsonReader.returnHeroes()
 activationKey = jsonReader.returnActivationKey()
@@ -27,20 +24,24 @@ def run():
     while True:
         if active == False:
             print('waiting for activation')
+            chf.terminate()
             time.sleep(0.5)
             continue
 
         if startTime == None:
             startTime = time.time()
 
+        chf.start()
         currentHero = chf.findCurrentHero()
+
         if type(currentHero) == list:
             print('hero found')
             ip = InputBot(currentHero, targetHero)
             ip.moveToTarget()
             active = False
+            startTime = None
         else:
-            print('no hero found')
+            print('hero not found')
             ellapsed = int(time.time()) - int(startTime)
             if ellapsed > 15: # should be a setting
                 startTime = None
@@ -53,7 +54,8 @@ def run():
 def listenForKey(key):
     global active
     if key.name == '0':
-        active = not active
+        # active = not active
+        active = True
 
 keyboard.on_press(listenForKey)
 

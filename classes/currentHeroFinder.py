@@ -8,12 +8,18 @@ class CurrentHeroFinder:
         self.heroes = heroes
 
         # Get the handle to the desktop window
+        self.hDesktop = None
+        # Get the device context for the entire screen
+        self.hDC = None
+
+        # self.queue = deque()
+
+    def start(self):
+        # Get the handle to the desktop window
         self.hDesktop = win32gui.GetDesktopWindow()
 
         # Get the device context for the entire screen
         self.hDC = win32gui.GetWindowDC(self.hDesktop)
-
-        self.queue = deque()
 
     def findCurrentHero(self):
         for hero, properties in self.heroes.items():
