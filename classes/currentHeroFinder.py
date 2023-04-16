@@ -1,11 +1,6 @@
-import json
 import win32gui
 import win32api
 from collections import deque
-
-# # Get heroes data from json
-# with open('supports.json', 'r') as file:
-#     heroes = json.load(file)
 
 class CurrentHeroFinder:
 
@@ -27,29 +22,19 @@ class CurrentHeroFinder:
             red = pixel & 0xff
             green = (pixel >> 8) & 0xff
             blue = (pixel >> 16) & 0xff
-            if red > 230 and green > 230 and blue > 200:
-                # return [properties['x-index'], properties['y-index']]
-
-                self.queue.append([properties['x-index'], properties['y-index']])
-                # self.queue.append(hero)
-                if len(self.queue) > 3:
-                    self.queue.popleft()
+            if red > 190 and green > 80 and blue < 50: # if red > 230 and green > 230 and blue > 200:
+                # self.terminate()
+                return [properties['x-index'], properties['y-index']]
+                # self.queue.append([properties['x-index'], properties['y-index']])
+                # if len(self.queue) > 3:
+                #     self.queue.popleft()
                 
-        if len(self.queue) >= 3:
-            if self.queue[0] == self.queue[1] and self.queue[0] == self.queue[2]:
-                print(self.queue[0])
-                return self.queue[0]
+        # if len(self.queue) >= 3:
+        #     if self.queue[0] == self.queue[1] and self.queue[0] == self.queue[2]:
+        #         print('hero found:', self.queue[0])
+        #         return self.queue[0]
                 
 
     def terminate(self):
         # Release the device context
         win32gui.ReleaseDC(self.hDesktop, self.hDC)
-        
-            
-
-d = deque()
-
-d.append(1)
-d.append(2)
-
-print(d[1])

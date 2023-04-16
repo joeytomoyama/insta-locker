@@ -1,79 +1,58 @@
 import threading
 import time
-import pyautogui
-import win32gui
-import win32api
 import keyboard
-import json
-from currentHeroFinder import CurrentHeroFinder
-from inputBot import InputBot
+from classes.currentHeroFinder import CurrentHeroFinder
+from classes.inputBot import InputBot
+from classes.jsonReader import JsonReader
 
 print('start')
 
-# Define the coordinates of the bottom left pixel
-x = 0
-y = 0
-
 active = False
-
-# Define the color of the pixel to trigger the key press
-white = (255, 255, 255)
-
+startTime = None
 
 # # Get the handle to the desktop window
 # hDesktop = win32gui.GetDesktopWindow()
 
-# Get heroes data from json
-with open('supports.json', 'r') as file:
-    heroes = json.load(file)
+jsonReader = JsonReader()
+heroes = jsonReader.returnHeroes()
+activationKey = jsonReader.returnActivationKey()
+targetHero = jsonReader.returnTargetHero()
 
 chf = CurrentHeroFinder(heroes)
 
 # Define the function to run continuously in the background
 def run():
     global active
+    global startTime
     while True:
         if active == False:
-            print('nothing happening')
+            print('waiting for activation')
             time.sleep(0.5)
             continue
 
-        # mouseLocation = pyautogui.position()
-
-        # # Get the device context for the entire screen
-        # hDC = win32gui.GetWindowDC(hDesktop)
-
-        # # Get the pixel value at the specified location
-        # # pixel = win32gui.GetPixel(hDC, x, y)
-        # pixel = win32gui.GetPixel(hDC, mouseLocation.x, mouseLocation.y)
-
-        # # Release the device context
-        # win32gui.ReleaseDC(hDesktop, hDC)
-
-        # # Print the pixel value as RGB tuple
-        # print("Pixel value:", (pixel & 0xff), ((pixel >> 8) & 0xff), ((pixel >> 16) & 0xff))
-        # print("Pixel position:", pyautogui.position().x, pyautogui.position().y)
+        if startTime == None:
+            startTime = time.time()
 
         currentHero = chf.findCurrentHero()
-        print(currentHero)
-        print(type(currentHero))
         if type(currentHero) == list:
-            ip = InputBot(currentHero, [13, 1])
-            # ip = InputBot([1, 1], [13, 1])
+            print('hero found')
+            ip = InputBot(currentHero, targetHero)
             ip.moveToTarget()
             active = False
-
-        # return
+        else:
+            print('no hero found')
+            ellapsed = int(time.time()) - int(startTime)
+            if ellapsed > 15: # should be a setting
+                startTime = None
+                active = False
 
         # Wait for a short time before checking again
-        time.sleep(0.5)
+        time.sleep(0.08)
 
-
-# run()
 
 def listenForKey(key):
     global active
-    if key.name == 'a':
+    if key.name == '0':
         active = not active
 
 keyboard.on_press(listenForKey)
