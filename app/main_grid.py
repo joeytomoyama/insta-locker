@@ -1,6 +1,7 @@
 import tkinter as tk
 import threading
 import keyboard
+from pynput import mouse
 
 from classes.jsonReader import JsonReader
 from classes.currentHeroFinder import CurrentHeroFinder
@@ -8,10 +9,14 @@ from classes.currentHeroFinder import CurrentHeroFinder
 class App:
     def __init__(self, root):
         self.root = root
-        self.root.title("Dynamic UI with Buttons")
+        self.root.title("Joey's OW2 insta locker")
         self.root.geometry("1400x400")  # Set the default window size
+        self.root.resizable(False, False) # Disable window resizing
 
-        self.selected_hero = None
+        self.jsonReader = JsonReader()
+
+        self.selected_hero = self.jsonReader.returnTargetHero()
+        print('targetHero: ', self.selected_hero)
 
         # Create a container frame for the buttons and center it
         self.button_frame = tk.Frame(root)
@@ -26,11 +31,10 @@ class App:
         self.button3 = tk.Button(self.button_frame, text="Settings", command=self.show_page3)
         self.button3.pack(side=tk.LEFT, padx=10)
         
-        self.hero_label = tk.Label(root, text="No hero selected", font=("Helvetica", 12))
+        self.hero_label = tk.Label(root, text=self.selected_hero, font=("Helvetica", 12))
         self.hero_label.pack(side=tk.BOTTOM, pady=10)
 
-        jsonReader = JsonReader()
-        self.heroes = jsonReader.returnHeroes()
+        self.heroes = self.jsonReader.returnHeroes()
 
         self.chf = CurrentHeroFinder()
 
@@ -49,10 +53,10 @@ class App:
         listener_thread.start()
 
     def listen_for_keys(self):
-        keyboard.on_press(self.keypress_handler)
+        keyboard.on_press(self.on_keypress)
         keyboard.wait()  # This will keep the thread alive to listen for keypresses
 
-    def keypress_handler(self, e):
+    def on_keypress(self, e):
         if e.name != 'f1':
             return
         
@@ -82,26 +86,46 @@ class App:
             print('canceling')
             self.root.after_cancel(self.repeated_call)
 
-    # UI stuff
+    # UI STUFF
     def create_page1(self):
         page1 = tk.Frame(self.root)
-        # page1.grid(row=0, column=0, columnspan=2, pady=10)
         page1.columnconfigure(0, weight=1)
         page1.columnconfigure(1, weight=1)
         # tk.Label(page1, text="This is Page 1", font=("Helvetica", 24)).grid(row=0)
         
         # create all the hero buttons
         for key, value in self.heroes.items():
-            sticky = 'e'
-            if value['x-index'] == 0:
-                sticky = 'ew'
-
             index = 0
-            tk.Button(page1, text=key, command=lambda k=key: self.hero_label.config(text=k)).grid(row=value['y-index'], column=value['x-index'], padx=5, pady=10, sticky=sticky)
+            tk.Button(page1, text=key, command=lambda k=key: self.page1_button_fun(k)).grid(
+                row=value['y-index'], column=value['x-index'], padx=5, pady=10
+            )
 
             index = index + 1   # increment index
 
+        tk.Button(page1, text='Calibrate', command=lambda h=self.selected_hero: self.activate_calibration_mode(h)).grid(
+            row=4, column=0, padx=5, pady=180
+        )
+
         return page1
+    
+    def activate_calibration_mode(self, hero):
+        # Function to handle mouse click events
+        def on_click(x, y, button, pressed):
+            if pressed:
+                print(f"Mouse clicked at ({x}, {y}) with {button}")
+
+                self.jsonReader.setHeroXY(hero, x, y)
+
+                # Stop the listener
+                return False
+
+        # Set up the mouse listener
+        with mouse.Listener(on_click=on_click) as listener:
+            listener.join()
+    
+    def page1_button_fun(self, hero):
+        self.hero_label.config(text=hero)
+        self.jsonReader.setTargetHero(hero)
 
     def create_page2(self):
         page2 = tk.Frame(self.root)

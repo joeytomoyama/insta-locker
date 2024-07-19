@@ -18,14 +18,35 @@ class JsonReader:
     
     def returnHeroesList(self):
         return self.heroes.keys()
-
+    
     def returnTargetHero(self):
+        with open('public/settings.json', 'r') as file:
+            return json.load(file)['targetHero']
+
+    def returnTargetHeroPos(self):
         with open('public/settings.json', 'r') as file:
             targetHero = json.load(file)['targetHero']
 
         for hero, properties in self.supports.items():
             if hero == targetHero:
                 return [properties['x-index'], properties['y-index']]
+            
+    def setTargetHero(self, hero):
+        with open('public/settings.json', 'r') as file:
+            settings = json.load(file)
+
+        print(settings)
+        settings['targetHero'] = hero
+
+        with open('public/settings.json', 'w') as file:
+            json.dump(settings, file, indent=4)
+
+    def setHeroXY(self, hero, x, y):
+        self.heroes[hero]['y-index'] = y
+        self.heroes[hero]['x-index'] = x
+
+        with open('public/heroes.json', 'w') as file:
+            json.dump(self.heroes, file, indent=4)
         
     def returnActivationKey(self):
         with open('public/settings.json', 'r') as file:

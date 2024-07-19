@@ -13,7 +13,7 @@ startTime = None
 jsonReader = JsonReader()
 heroes = jsonReader.returnHeroes()
 activationKey = jsonReader.returnActivationKey()
-targetHero = jsonReader.returnTargetHero()
+targetHero = jsonReader.returnTargetHeroPos()
 
 chf = CurrentHeroFinder(heroes)
 
