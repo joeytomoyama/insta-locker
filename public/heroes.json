@@ -1,13 +1,13 @@
 {
     "D.Va": {
-        "positionY": 405,
-        "positionX": 275,
+        "positionY": 846,
+        "positionX": 274,
         "y-index": 0,
         "x-index": 0
     },
     "Doomfist": {
-        "positionY": 437,
-        "positionX": 241,
+        "positionY": 844,
+        "positionX": 338,
         "y-index": 0,
         "x-index": 1
     },
@@ -120,14 +120,14 @@
         "x-index": 19
     },
     "Reinhardt": {
-        "positionY": 0,
-        "positionX": 0,
+        "positionY": 871,
+        "positionX": 222,
         "y-index": 1,
         "x-index": 0
     },
     "Roadhog": {
-        "positionY": 0,
-        "positionX": 0,
+        "positionY": 880,
+        "positionX": 338,
         "y-index": 1,
         "x-index": 1
     },

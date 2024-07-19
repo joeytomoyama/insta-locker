@@ -15,9 +15,6 @@ class App:
 
         self.jsonReader = JsonReader()
 
-        # self.selected_hero = self.jsonReader.returnTargetHero()
-        # print('targetHero: ', self.selected_hero)
-
         # Create a container frame for the buttons and center it
         self.button_frame = tk.Frame(root)
         self.button_frame.pack(side=tk.TOP, pady=10)
@@ -57,7 +54,7 @@ class App:
         keyboard.wait()  # This will keep the thread alive to listen for keypresses
 
     def on_keypress(self, e):
-        if e.name != 'f1':
+        if e.name != 'f3':
             return
         
         # Start looking for pixels
@@ -73,6 +70,7 @@ class App:
 
         if type(currentHero) == list:
             print('hero found')
+            print(currentHero)
             # ip = InputBot(currentHero, targetHero)
             # ip.moveToTarget()
             return
@@ -82,9 +80,12 @@ class App:
 
     def stop_main_function(self):
         # Stop the repeated calls
-        if self.repeated_call:
-            print('canceling')
-            self.root.after_cancel(self.repeated_call)
+        try:
+            if self.repeated_call:
+                print('canceling')
+                self.root.after_cancel(self.repeated_call)
+        except Exception:
+            pass
 
     # UI STUFF
     def create_page1(self):
@@ -116,6 +117,7 @@ class App:
 
                 hero = self.jsonReader.returnTargetHero()
                 self.jsonReader.setHeroXY(hero, x, y)
+                print("color: " + str(self.chf.getPixelColor(x, y)))
 
                 # Stop the listener
                 return False
