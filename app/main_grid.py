@@ -15,8 +15,8 @@ class App:
 
         self.jsonReader = JsonReader()
 
-        self.selected_hero = self.jsonReader.returnTargetHero()
-        print('targetHero: ', self.selected_hero)
+        # self.selected_hero = self.jsonReader.returnTargetHero()
+        # print('targetHero: ', self.selected_hero)
 
         # Create a container frame for the buttons and center it
         self.button_frame = tk.Frame(root)
@@ -31,7 +31,7 @@ class App:
         self.button3 = tk.Button(self.button_frame, text="Settings", command=self.show_page3)
         self.button3.pack(side=tk.LEFT, padx=10)
         
-        self.hero_label = tk.Label(root, text=self.selected_hero, font=("Helvetica", 12))
+        self.hero_label = tk.Label(root, text=self.jsonReader.returnTargetHero(), font=("Helvetica", 12))
         self.hero_label.pack(side=tk.BOTTOM, pady=10)
 
         self.heroes = self.jsonReader.returnHeroes()
@@ -102,18 +102,19 @@ class App:
 
             index = index + 1   # increment index
 
-        tk.Button(page1, text='Calibrate', command=lambda h=self.selected_hero: self.activate_calibration_mode(h)).grid(
+        tk.Button(page1, text='Calibrate', command=self.activate_calibration_mode).grid(
             row=4, column=0, padx=5, pady=180
         )
 
         return page1
     
-    def activate_calibration_mode(self, hero):
+    def activate_calibration_mode(self):
         # Function to handle mouse click events
         def on_click(x, y, button, pressed):
             if pressed:
                 print(f"Mouse clicked at ({x}, {y}) with {button}")
 
+                hero = self.jsonReader.returnTargetHero()
                 self.jsonReader.setHeroXY(hero, x, y)
 
                 # Stop the listener

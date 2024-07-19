@@ -1,202 +1,241 @@
 {
     "D.Va": {
-        "position": [100, 100],
+        "positionY": 405,
+        "positionX": 275,
         "y-index": 0,
         "x-index": 0
     },
     "Doomfist": {
-        "position": [101, 101],
+        "positionY": 437,
+        "positionX": 241,
         "y-index": 0,
         "x-index": 1
     },
     "JunkerQueen": {
-        "position": [101, 101],
+        "positionY": 864,
+        "positionX": 687,
         "y-index": 0,
         "x-index": 2
     },
     "Mauga": {
-        "position": [101, 101],
+        "positionY": 413,
+        "positionX": 360,
         "y-index": 0,
         "x-index": 3
     },
     "Orisa": {
-        "position": [101, 101],
+        "positionY": 0,
+        "positionX": 0,
         "y-index": 0,
         "x-index": 4
     },
     "Ramattra": {
-        "position": [101, 101],
+        "positionY": 0,
+        "positionX": 0,
         "y-index": 0,
         "x-index": 5
     },
     "Ashe": {
-        "position": [101, 101],
+        "positionY": 0,
+        "positionX": 0,
         "y-index": 0,
         "x-index": 6
     },
     "Bastion": {
-        "position": [101, 101],
+        "positionY": 0,
+        "positionX": 0,
         "y-index": 0,
         "x-index": 7
     },
     "Cassidy": {
-        "position": [101, 101],
+        "positionY": 0,
+        "positionX": 0,
         "y-index": 0,
         "x-index": 8
     },
     "Echo": {
-        "position": [101, 101],
+        "positionY": 0,
+        "positionX": 0,
         "y-index": 0,
         "x-index": 9
     },
     "Genji": {
-        "position": [101, 101],
+        "positionY": 0,
+        "positionX": 0,
         "y-index": 0,
         "x-index": 10
     },
     "Hanzo": {
-        "position": [101, 101],
+        "positionY": 0,
+        "positionX": 0,
         "y-index": 0,
         "x-index": 11
     },
     "Junkrat": {
-        "position": [101, 101],
+        "positionY": 0,
+        "positionX": 0,
         "y-index": 0,
         "x-index": 12
     },
     "Mei": {
-        "position": [101, 101],
+        "positionY": 0,
+        "positionX": 0,
         "y-index": 0,
         "x-index": 13
     },
     "Pharah": {
-        "position": [101, 101],
+        "positionY": 0,
+        "positionX": 0,
         "y-index": 0,
         "x-index": 14
     },
     "Ana": {
-        "position": [1413, 878],
+        "positionY": 0,
+        "positionX": 0,
         "y-index": 0,
         "x-index": 15
     },
     "Baptiste": {
-        "position": [1471, 876],
+        "positionY": 0,
+        "positionX": 0,
         "y-index": 0,
         "x-index": 16
     },
     "Brigitte": {
-        "position": [1534, 879],
+        "positionY": 0,
+        "positionX": 0,
         "y-index": 0,
         "x-index": 17
     },
     "Illari": {
-        "position": [1534, 879],
+        "positionY": 0,
+        "positionX": 0,
         "y-index": 0,
         "x-index": 18
     },
     "Kiriko": {
-        "position": [1605, 878],
+        "positionY": 0,
+        "positionX": 0,
         "y-index": 0,
         "x-index": 19
     },
-
     "Reinhardt": {
-        "position": [101, 101],
+        "positionY": 0,
+        "positionX": 0,
         "y-index": 1,
         "x-index": 0
     },
     "Roadhog": {
-        "position": [101, 101],
+        "positionY": 0,
+        "positionX": 0,
         "y-index": 1,
         "x-index": 1
     },
     "Sigma": {
-        "position": [101, 101],
+        "positionY": 0,
+        "positionX": 0,
         "y-index": 1,
         "x-index": 2
     },
     "Winston": {
-        "position": [101, 101],
+        "positionY": 0,
+        "positionX": 0,
         "y-index": 1,
         "x-index": 3
     },
     "WreckingBall": {
-        "position": [101, 101],
+        "positionY": 0,
+        "positionX": 0,
         "y-index": 1,
         "x-index": 4
     },
     "Zarya": {
-        "position": [101, 101],
+        "positionY": 0,
+        "positionX": 0,
         "y-index": 1,
         "x-index": 5
     },
     "Reaper": {
-        "position": [101, 101],
+        "positionY": 0,
+        "positionX": 0,
         "y-index": 1,
         "x-index": 6
     },
     "Sojourn": {
-        "position": [101, 101],
+        "positionY": 0,
+        "positionX": 0,
         "y-index": 1,
         "x-index": 7
     },
     "Soldier76": {
-        "position": [101, 101],
+        "positionY": 0,
+        "positionX": 0,
         "y-index": 1,
         "x-index": 8
     },
     "Sombra": {
-        "position": [101, 101],
+        "positionY": 0,
+        "positionX": 0,
         "y-index": 1,
         "x-index": 9
     },
     "Symmetra": {
-        "position": [101, 101],
+        "positionY": 0,
+        "positionX": 0,
         "y-index": 1,
         "x-index": 10
     },
-    "Torbjörn": {
-        "position": [101, 101],
+    "Torbj\u00c3\u00b6rn": {
+        "positionY": 0,
+        "positionX": 0,
         "y-index": 1,
         "x-index": 11
     },
     "Tracer": {
-        "position": [101, 101],
+        "positionY": 0,
+        "positionX": 0,
         "y-index": 1,
         "x-index": 12
     },
     "Venture": {
-        "position": [1670, 878],
+        "positionY": 0,
+        "positionX": 0,
         "y-index": 1,
         "x-index": 13
     },
     "Widowmaker": {
-        "position": [101, 101],
+        "positionY": 0,
+        "positionX": 0,
         "y-index": 1,
         "x-index": 14
     },
     "Lifeweaver": {
-        "position": [1410, 941],
+        "positionY": 0,
+        "positionX": 0,
         "y-index": 1,
         "x-index": 15
     },
     "Lucio": {
-        "position": [1670, 878],
+        "positionY": 0,
+        "positionX": 0,
         "y-index": 1,
         "x-index": 16
     },
     "Mercy": {
-        "position": [1477, 942],
+        "positionY": 0,
+        "positionX": 0,
         "y-index": 1,
         "x-index": 17
     },
     "Moira": {
-        "position": [1540, 942],
+        "positionY": 0,
+        "positionX": 0,
         "y-index": 1,
         "x-index": 18
     },
     "Zenyatta": {
-        "position": [1605, 943],
+        "positionY": 0,
+        "positionX": 0,
         "y-index": 1,
         "x-index": 19
     }

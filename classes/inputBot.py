@@ -2,7 +2,7 @@ import pyautogui
 
 class InputBot:
 
-    def __init__(self, current, target):
+    def __init__(self, current, target):    # change target to targetX and targetY since heroes.json change
         self.current = current
         self.target = target
 

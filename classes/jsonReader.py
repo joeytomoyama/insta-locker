@@ -35,15 +35,14 @@ class JsonReader:
         with open('public/settings.json', 'r') as file:
             settings = json.load(file)
 
-        print(settings)
         settings['targetHero'] = hero
 
         with open('public/settings.json', 'w') as file:
             json.dump(settings, file, indent=4)
 
     def setHeroXY(self, hero, x, y):
-        self.heroes[hero]['y-index'] = y
-        self.heroes[hero]['x-index'] = x
+        self.heroes[hero]['positionY'] = y
+        self.heroes[hero]['positionX'] = x
 
         with open('public/heroes.json', 'w') as file:
             json.dump(self.heroes, file, indent=4)
