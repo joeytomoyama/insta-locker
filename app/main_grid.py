@@ -4,6 +4,7 @@ import keyboard
 from pynput import mouse
 
 from classes.jsonReader import JsonReader
+from classes.inputBot import InputBot
 from classes.currentHeroFinder import CurrentHeroFinder
 
 class App:
@@ -14,6 +15,7 @@ class App:
         self.root.resizable(False, False) # Disable window resizing
 
         self.jsonReader = JsonReader()
+        self.inputBot = InputBot()
 
         # Create a container frame for the buttons and center it
         self.button_frame = tk.Frame(root)
@@ -70,9 +72,10 @@ class App:
 
         if type(currentHero) == list:
             print('hero found')
+            targetHero = self.jsonReader.returnTargetHeroPos()
             print(currentHero)
-            # ip = InputBot(currentHero, targetHero)
-            # ip.moveToTarget()
+            print(targetHero)
+            self.inputBot.moveToTarget(currentHero, targetHero)
             return
 
         # Schedule the next call in n milliseconds

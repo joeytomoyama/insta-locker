@@ -27,7 +27,7 @@ class JsonReader:
         with open('public/settings.json', 'r') as file:
             targetHero = json.load(file)['targetHero']
 
-        for hero, properties in self.supports.items():
+        for hero, properties in self.heroes.items():
             if hero == targetHero:
                 return [properties['x-index'], properties['y-index']]
             
