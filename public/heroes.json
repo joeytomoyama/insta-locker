@@ -14,17 +14,17 @@
         "y-index": 0,
         "x-index": 2
     },
-    "Orisa": {
+    "Mauga": {
         "position": [101, 101],
         "y-index": 0,
         "x-index": 3
     },
-    "Ramattra": {
+    "Orisa": {
         "position": [101, 101],
         "y-index": 0,
         "x-index": 4
     },
-    "Reinhardt": {
+    "Ramattra": {
         "position": [101, 101],
         "y-index": 0,
         "x-index": 5
@@ -89,100 +89,115 @@
         "y-index": 0,
         "x-index": 17
     },
-    "Kiriko": {
-        "position": [1605, 878],
+    "Illari": {
+        "position": [1534, 879],
         "y-index": 0,
         "x-index": 18
     },
-    "Lucio": {
-        "position": [1670, 878],
+    "Kiriko": {
+        "position": [1605, 878],
         "y-index": 0,
         "x-index": 19
     },
 
-    "Roadhog": {
+    "Reinhardt": {
         "position": [101, 101],
         "y-index": 1,
         "x-index": 0
     },
-    "Sigma": {
+    "Roadhog": {
         "position": [101, 101],
         "y-index": 1,
         "x-index": 1
     },
-    "Winston": {
+    "Sigma": {
         "position": [101, 101],
         "y-index": 1,
         "x-index": 2
     },
-    "WreckingBall": {
+    "Winston": {
         "position": [101, 101],
         "y-index": 1,
         "x-index": 3
     },
-    "Zarya": {
+    "WreckingBall": {
         "position": [101, 101],
         "y-index": 1,
         "x-index": 4
     },
-    "Reaper": {
+    "Zarya": {
         "position": [101, 101],
         "y-index": 1,
         "x-index": 5
     },
-    "Sojourn": {
+    "Reaper": {
         "position": [101, 101],
         "y-index": 1,
         "x-index": 6
     },
-    "Soldier76": {
+    "Sojourn": {
         "position": [101, 101],
         "y-index": 1,
         "x-index": 7
     },
-    "Sombra": {
+    "Soldier76": {
         "position": [101, 101],
         "y-index": 1,
         "x-index": 8
     },
-    "Symmetra": {
+    "Sombra": {
         "position": [101, 101],
         "y-index": 1,
         "x-index": 9
     },
-    "Torbjörn": {
+    "Symmetra": {
         "position": [101, 101],
         "y-index": 1,
         "x-index": 10
     },
-    "Tracer": {
+    "Torbjörn": {
         "position": [101, 101],
         "y-index": 1,
         "x-index": 11
     },
-    "Widowmaker": {
+    "Tracer": {
         "position": [101, 101],
         "y-index": 1,
         "x-index": 12
     },
+    "Venture": {
+        "position": [1670, 878],
+        "y-index": 1,
+        "x-index": 13
+    },
+    "Widowmaker": {
+        "position": [101, 101],
+        "y-index": 1,
+        "x-index": 14
+    },
     "Lifeweaver": {
         "position": [1410, 941],
         "y-index": 1,
-        "x-index": 13
+        "x-index": 15
+    },
+    "Lucio": {
+        "position": [1670, 878],
+        "y-index": 1,
+        "x-index": 16
     },
     "Mercy": {
         "position": [1477, 942],
         "y-index": 1,
-        "x-index": 14
+        "x-index": 17
     },
     "Moira": {
         "position": [1540, 942],
         "y-index": 1,
-        "x-index": 15
+        "x-index": 18
     },
     "Zenyatta": {
         "position": [1605, 943],
         "y-index": 1,
-        "x-index": 16
+        "x-index": 19
     }
 }

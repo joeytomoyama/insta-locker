@@ -2,16 +2,30 @@ import win32gui
 import win32api
 from collections import deque
 
+from classes.jsonReader import JsonReader
+
 class CurrentHeroFinder:
 
-    def __init__(self, heroes):
-        self.heroes = heroes
+    # def __init__(self, heroes):
+    #     self.heroes = heroes
 
+    #     # Get the handle to the desktop window
+    #     self.hDesktop = None
+    #     # Get the device context for the entire screen
+    #     self.hDC = None
+
+    #     # self.queue = deque()
+
+    def __init__(self):
         # Get the handle to the desktop window
-        self.hDesktop = None
+        # self.hDesktop = None
+        self.hDesktop = win32gui.GetDesktopWindow()
         # Get the device context for the entire screen
-        self.hDC = None
+        # self.hDC = None
+        self.hDC = win32gui.GetWindowDC(self.hDesktop)
 
+        jsonReader = JsonReader()
+        self.heroes = jsonReader.returnHeroes()
         # self.queue = deque()
 
     def start(self):

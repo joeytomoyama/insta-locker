@@ -44,11 +44,12 @@ def run():
             print('hero not found')
             ellapsed = int(time.time()) - int(startTime)
             if ellapsed > 15: # should be a setting
+                print('15 seconds passed')
                 startTime = None
                 active = False
 
         # Wait for a short time before checking again
-        time.sleep(0.08)
+        time.sleep(0.008)
 
 
 def listenForKey(key):
