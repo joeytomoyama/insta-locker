@@ -32,7 +32,7 @@ class InputBot:
     #         self.dispatchInput(1, 'up')
 
     def moveToTarget(self, current, target):
-        print('moving')
+        print(f'fmoving from {current} to {target}')
         # X
         deltaX = target[0] - current[0]
         directionX = 'right'

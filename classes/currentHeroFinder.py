@@ -7,7 +7,8 @@ from classes.jsonReader import JsonReader
 
 class CurrentHeroFinder:
 
-    target_color = (221, 80, 0)
+    # target_color = (221, 80, 0)
+    target_color = (235, 235, 220)
 
     # def __init__(self, heroes):
     #     self.heroes = heroes
@@ -47,7 +48,7 @@ class CurrentHeroFinder:
     def color_distance(self, color1, color2):
         return math.sqrt(sum((a - b) ** 2 for a, b in zip(color1, color2)))
     
-    def are_colors_similar(self, color1, color2, threshold=50):
+    def are_colors_similar(self, color1, color2, threshold=10):
         distance = self.color_distance(color1, color2)
         return distance < threshold
 

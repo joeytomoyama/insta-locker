@@ -1,37 +1,37 @@
 {
     "D.Va": {
-        "positionY": 846,
-        "positionX": 274,
+        "positionY": 864,
+        "positionX": 201,
         "y-index": 0,
         "x-index": 0
     },
     "Doomfist": {
-        "positionY": 844,
-        "positionX": 338,
+        "positionY": 859,
+        "positionX": 284,
         "y-index": 0,
         "x-index": 1
     },
     "JunkerQueen": {
-        "positionY": 864,
-        "positionX": 687,
+        "positionY": 870,
+        "positionX": 349,
         "y-index": 0,
         "x-index": 2
     },
     "Mauga": {
-        "positionY": 413,
-        "positionX": 360,
+        "positionY": 867,
+        "positionX": 412,
         "y-index": 0,
         "x-index": 3
     },
     "Orisa": {
-        "positionY": 0,
-        "positionX": 0,
+        "positionY": 871,
+        "positionX": 477,
         "y-index": 0,
         "x-index": 4
     },
     "Ramattra": {
-        "positionY": 0,
-        "positionX": 0,
+        "positionY": 869,
+        "positionX": 548,
         "y-index": 0,
         "x-index": 5
     },
@@ -90,68 +90,74 @@
         "x-index": 14
     },
     "Ana": {
-        "positionY": 0,
-        "positionX": 0,
+        "positionY": 814,
+        "positionX": 1353,
         "y-index": 0,
         "x-index": 15
     },
     "Baptiste": {
-        "positionY": 0,
-        "positionX": 0,
+        "positionY": 844,
+        "positionX": 1469,
         "y-index": 0,
         "x-index": 16
     },
     "Brigitte": {
-        "positionY": 0,
-        "positionX": 0,
+        "positionY": 845,
+        "positionX": 1482,
         "y-index": 0,
         "x-index": 17
     },
     "Illari": {
-        "positionY": 0,
-        "positionX": 0,
+        "positionY": 810,
+        "positionX": 1547,
         "y-index": 0,
         "x-index": 18
     },
-    "Kiriko": {
-        "positionY": 0,
-        "positionX": 0,
+    "Juno": {
+        "positionY": 858,
+        "positionX": 1610,
         "y-index": 0,
         "x-index": 19
     },
+    "Kiriko": {
+        "positionY": 849,
+        "positionX": 1677,
+        "y-index": 0,
+        "x-index": 20
+    },
     "Reinhardt": {
-        "positionY": 871,
-        "positionX": 222,
+        "positionY": 926,
+        "positionX": 181,
         "y-index": 1,
         "x-index": 0
     },
     "Roadhog": {
-        "positionY": 880,
-        "positionX": 338,
+        "positionY": 922,
+        "positionX": 285,
         "y-index": 1,
         "x-index": 1
     },
     "Sigma": {
-        "positionY": 0,
-        "positionX": 0,
+        "positionY": 923,
+        "positionX": 348,
         "y-index": 1,
         "x-index": 2
     },
     "Winston": {
-        "positionY": 0,
-        "positionX": 0,
+        "positionY": 940,
+        "positionX": 376,
         "y-index": 1,
         "x-index": 3
     },
     "WreckingBall": {
-        "positionY": 0,
-        "positionX": 0,
+        "positionY": 932,
+        "positionX": 493,
         "y-index": 1,
         "x-index": 4
     },
     "Zarya": {
-        "positionY": 0,
-        "positionX": 0,
+        "positionY": 930,
+        "positionX": 516,
         "y-index": 1,
         "x-index": 5
     },
@@ -210,32 +216,32 @@
         "x-index": 14
     },
     "Lifeweaver": {
-        "positionY": 0,
-        "positionX": 0,
+        "positionY": 900,
+        "positionX": 1360,
         "y-index": 1,
         "x-index": 15
     },
     "Lucio": {
-        "positionY": 0,
-        "positionX": 0,
+        "positionY": 913,
+        "positionX": 1419,
         "y-index": 1,
         "x-index": 16
     },
     "Mercy": {
-        "positionY": 0,
-        "positionX": 0,
+        "positionY": 909,
+        "positionX": 1482,
         "y-index": 1,
         "x-index": 17
     },
     "Moira": {
-        "positionY": 0,
-        "positionX": 0,
+        "positionY": 905,
+        "positionX": 1549,
         "y-index": 1,
         "x-index": 18
     },
     "Zenyatta": {
-        "positionY": 0,
-        "positionX": 0,
+        "positionY": 874,
+        "positionX": 1658,
         "y-index": 1,
         "x-index": 19
     }

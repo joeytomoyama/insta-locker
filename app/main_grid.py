@@ -11,7 +11,7 @@ class App:
     def __init__(self, root):
         self.root = root
         self.root.title("Joey's OW2 insta locker")
-        self.root.geometry("1400x400")  # Set the default window size
+        self.root.geometry("1450x400")  # Set the default window size
         self.root.resizable(False, False) # Disable window resizing
 
         self.jsonReader = JsonReader()
@@ -66,7 +66,6 @@ class App:
 
     def run_main_function(self):
         # Function to be run repeatedly
-        # self.chf.start()
         print('finding')
         currentHero = self.chf.findCurrentHero()
 
